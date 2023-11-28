@@ -1,14 +1,18 @@
-Main goals of this coding project:
+Main goals of this coding project: (Copy Constructor , Copy Assignment Operator and destructor)
 
-    Implement a simple inheritance hierarchy between the Person and Employee classes, where both classes include a pointer-based dynamic array. As a result, you are required to include the big-3 in both classes.
+    Implement a simple inheritance hierarchy between the Person and Employee classes, where both classes include a pointer-based dynamic array. 
+    As a result, you are required to include the big-3 in both classes.
     Implement a set of virtual functions to realize polymorphism.
     Take advantage of polymorphism to manage a dynamic array that consists of both Person objects and Employee projects.
 
 The first parameter of this function is an array of Person pointers (i.e., Person *).
 
     This function is going to first allocate an array of (numPersons + numEmployees ) Person pointers.
-    Next, for each of the first numPersons pointers on this array, say arrayPersonEmp[ i ], this function will create a Person object using the new operator and make it the pointee of arrayPersonEmp[ i ]. Furthermore, it will call Person's setEmail() member function to set each newly created Person object's personalEmail to personal@gmail.com.
-    Finally, for each of the next numEmployees pointers on this array, say arrayPersonEmp[ j ], this function will create an Employee object using the new operator and make it the pointee of arrayPersonEmp[ j ]. Similarly, it will call Employee's setEmail() member function to set each newly created Employee object's work_email to work@gmail.com.
+    Next, for each of the first numPersons pointers on this array, say arrayPersonEmp[ i ], this function will create a 
+    Person object using the new operator and make it the pointee of arrayPersonEmp[ i ]. Furthermore, it will call Person's setEmail() 
+    member function to set each newly created Person object's personalEmail to personal@gmail.com. Finally, for each of the next numEmployees 
+    pointers on this array, say arrayPersonEmp[ j ], this function will create an Employee object using the new operator and make it the pointee 
+    of arrayPersonEmp[ j ]. Similarly, it will call Employee's setEmail() member function to set each newly created Employee object's work_email to work@gmail.com.
 
 For example, if numPersons=12 and numEmployees=10, this function will result in the following:
 
