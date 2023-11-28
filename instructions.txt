@@ -1,0 +1,32 @@
+Main goals of this coding project:
+
+    Implement a simple inheritance hierarchy between the Person and Employee classes, where both classes include a pointer-based dynamic array. As a result, you are required to include the big-3 in both classes.
+    Implement a set of virtual functions to realize polymorphism.
+    Take advantage of polymorphism to manage a dynamic array that consists of both Person objects and Employee projects.
+
+The first parameter of this function is an array of Person pointers (i.e., Person *).
+
+    This function is going to first allocate an array of (numPersons + numEmployees ) Person pointers.
+    Next, for each of the first numPersons pointers on this array, say arrayPersonEmp[ i ], this function will create a Person object using the new operator and make it the pointee of arrayPersonEmp[ i ]. Furthermore, it will call Person's setEmail() member function to set each newly created Person object's personalEmail to personal@gmail.com.
+    Finally, for each of the next numEmployees pointers on this array, say arrayPersonEmp[ j ], this function will create an Employee object using the new operator and make it the pointee of arrayPersonEmp[ j ]. Similarly, it will call Employee's setEmail() member function to set each newly created Employee object's work_email to work@gmail.com.
+
+For example, if numPersons=12 and numEmployees=10, this function will result in the following:
+
+    arrayPersonEmp will be an array of 22 Person pointers
+    each of the first 12 Person pointers' pointees will be a Person object. Each Person object's personalEmail will be personal@gmail.com
+    each of the next 10 Person pointers' pointees will be an Employee object. Each Employee object's work_email will be work@gmail.com.
+
+Good to know: the following statement will make p point to a single Person object:
+
+Person *p = new Person; 
+
+The second standalone function is
+
+void deleteMixedArray(Person** &arrayPersonEmp, int size );
+
+This function is going to deallocate the space held by arrayPersonEmp, which is an array of size Person pointers. Each of such Person pointers has a dynamically allocated pointee, which is either a Person object or an Employee one.
+Your responsibility in this coding lab is to implement the following three program files:
+
+    Person.cpp: implement all the member functions declared in Person.h
+    Employee.cpp: implement all the member functions and the two stand-alone functions declared in Employee.h
+    unitTests.h: test your Person and Employee ADTs and the two stand-alone functions.
