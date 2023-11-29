@@ -25,7 +25,8 @@ public:
     Employee operator=(const Employee& rhs );
     
     double getChangeRate( int i) const;////return the i-th rate in the sal_change_rates array if i is valid; otherwise return -1.00
-    
+    int getCntSalChanges() const; //return cnt_sal_changes
+    void setCntSalChanges(int new_cnt); //new_cnt-->cnt_sal_changes
     virtual string getEmail() const; //return work_email
     virtual void setEmail( string new_email); //new_email-->work_email
     virtual string getTypeOfObj() const; //return "Employee"
